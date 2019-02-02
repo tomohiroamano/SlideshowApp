@@ -12,6 +12,10 @@
 		8435C9B9220258AA00F4E06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8435C9B7220258AA00F4E06A /* Main.storyboard */; };
 		8435C9BB220258AC00F4E06A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8435C9BA220258AC00F4E06A /* Assets.xcassets */; };
 		8435C9BE220258AC00F4E06A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8435C9BC220258AC00F4E06A /* LaunchScreen.storyboard */; };
+		8435C9C82202608900F4E06A /* youkai_karakasakozou.png in Resources */ = {isa = PBXBuildFile; fileRef = 8435C9C52202608800F4E06A /* youkai_karakasakozou.png */; };
+		8435C9C92202608900F4E06A /* job_jushinryou_syukin_angry.png in Resources */ = {isa = PBXBuildFile; fileRef = 8435C9C62202608900F4E06A /* job_jushinryou_syukin_angry.png */; };
+		8435C9CA2202608900F4E06A /* benjomeshi_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 8435C9C72202608900F4E06A /* benjomeshi_boy.png */; };
+		84F758D02204814A00405DD4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F758CF2204814A00405DD4 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		8435C9BA220258AC00F4E06A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8435C9BD220258AC00F4E06A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8435C9BF220258AC00F4E06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8435C9C52202608800F4E06A /* youkai_karakasakozou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youkai_karakasakozou.png; sourceTree = "<group>"; };
+		8435C9C62202608900F4E06A /* job_jushinryou_syukin_angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = job_jushinryou_syukin_angry.png; sourceTree = "<group>"; };
+		8435C9C72202608900F4E06A /* benjomeshi_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = benjomeshi_boy.png; sourceTree = "<group>"; };
+		84F758CF2204814A00405DD4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,14 @@
 			children = (
 				8435C9B3220258AA00F4E06A /* AppDelegate.swift */,
 				8435C9B5220258AA00F4E06A /* ViewController.swift */,
+				8435C9C72202608900F4E06A /* benjomeshi_boy.png */,
+				8435C9C62202608900F4E06A /* job_jushinryou_syukin_angry.png */,
+				8435C9C52202608800F4E06A /* youkai_karakasakozou.png */,
 				8435C9B7220258AA00F4E06A /* Main.storyboard */,
 				8435C9BA220258AC00F4E06A /* Assets.xcassets */,
 				8435C9BC220258AC00F4E06A /* LaunchScreen.storyboard */,
 				8435C9BF220258AC00F4E06A /* Info.plist */,
+				84F758CF2204814A00405DD4 /* ResultViewController.swift */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -124,7 +136,10 @@
 			files = (
 				8435C9BE220258AC00F4E06A /* LaunchScreen.storyboard in Resources */,
 				8435C9BB220258AC00F4E06A /* Assets.xcassets in Resources */,
+				8435C9CA2202608900F4E06A /* benjomeshi_boy.png in Resources */,
+				8435C9C92202608900F4E06A /* job_jushinryou_syukin_angry.png in Resources */,
 				8435C9B9220258AA00F4E06A /* Main.storyboard in Resources */,
+				8435C9C82202608900F4E06A /* youkai_karakasakozou.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +152,7 @@
 			files = (
 				8435C9B6220258AA00F4E06A /* ViewController.swift in Sources */,
 				8435C9B4220258AA00F4E06A /* AppDelegate.swift in Sources */,
+				84F758D02204814A00405DD4 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

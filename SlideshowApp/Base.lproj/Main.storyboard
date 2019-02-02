@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,123 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="Lww-f5-eEW">
+                                <rect key="frame" x="10" y="387" width="300" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgu-fa-pgx">
+                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="return2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMI-2J-hlF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-SH-UMf">
+                                        <rect key="frame" x="115.5" y="0.0" width="69" height="32"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <state key="normal" title="進む"/>
+                                        <connections>
+                                            <action selector="moveon2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vge-EV-qMk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-l0-eIc">
+                                        <rect key="frame" x="231.5" y="0.0" width="68.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <state key="normal" title="再生"/>
+                                        <connections>
+                                            <action selector="auto2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4c-81-jAi"/>
+                                            <action selector="moveon2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tq8-nN-7ou"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Of3-Bu-iTO"/>
+                                </constraints>
+                            </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sN4-6M-kTf">
+                                <rect key="frame" x="10" y="160" width="300" height="177"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sN4-6M-kTf" secondAttribute="height" multiplier="151:89" id="9GF-WF-Qxf"/>
+                                    <constraint firstAttribute="width" constant="300" id="GdP-tM-lH0"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ted-kP-Mdd" appends="YES" id="Mkg-13-PBJ"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sN4-6M-kTf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="Oye-mJ-LkI"/>
+                            <constraint firstItem="Lww-f5-eEW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UZy-W9-KV1"/>
+                            <constraint firstItem="sN4-6M-kTf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gcO-Fb-oCo"/>
+                            <constraint firstItem="Lww-f5-eEW" firstAttribute="top" secondItem="sN4-6M-kTf" secondAttribute="bottom" constant="50" id="ifx-EP-wRW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="auto1" destination="Ty1-l0-eIc" id="3OA-VJ-HwE"/>
+                        <outlet property="imageView" destination="sN4-6M-kTf" id="NGM-75-1be"/>
+                        <outlet property="moveon1" destination="CUS-SH-UMf" id="s9Z-EO-OGk"/>
+                        <outlet property="return1" destination="wgu-fa-pgx" id="rsR-Qf-oeB"/>
+                        <segue destination="mep-Xq-LJD" kind="show" identifier="result" id="MmE-FB-jHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ted-kP-Mdd">
+                    <connections>
+                        <action selector="onTapImage:" destination="BYZ-38-t0r" id="KJZ-G4-yxD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="27.436281859070466"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="oVc-aC-ejC">
+            <objects>
+                <viewController id="mep-Xq-LJD" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0s-5w-noL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PE4-xG-PSk">
+                                <rect key="frame" x="0.0" y="160" width="320" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="AUG-Lh-qbv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9b-bd-r7D">
+                                <rect key="frame" x="140" y="390" width="40" height="32"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="kQp-kS-Iqi" kind="unwind" unwindAction="unwind:" id="d5P-rA-3EP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j9b-bd-r7D" firstAttribute="top" secondItem="PE4-xG-PSk" secondAttribute="bottom" constant="36" id="4KC-qY-F1M"/>
+                            <constraint firstItem="PE4-xG-PSk" firstAttribute="top" secondItem="WUH-LP-VmY" secondAttribute="top" constant="140" id="Hzl-NI-xeg"/>
+                            <constraint firstItem="PE4-xG-PSk" firstAttribute="leading" secondItem="a0s-5w-noL" secondAttribute="leading" id="Tl8-1e-rxA"/>
+                            <constraint firstItem="PE4-xG-PSk" firstAttribute="centerX" secondItem="WUH-LP-VmY" secondAttribute="centerX" id="aje-Kx-Kg1"/>
+                            <constraint firstItem="j9b-bd-r7D" firstAttribute="centerX" secondItem="WUH-LP-VmY" secondAttribute="centerX" id="xSh-XI-ofs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WUH-LP-VmY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView2" destination="PE4-xG-PSk" id="oQ1-75-c6q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afn-lc-U2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kQp-kS-Iqi" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
