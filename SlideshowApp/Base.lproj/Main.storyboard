@@ -43,7 +43,6 @@
                                         <state key="normal" title="再生"/>
                                         <connections>
                                             <action selector="auto2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4c-81-jAi"/>
-                                            <action selector="moveon2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tq8-nN-7ou"/>
                                         </connections>
                                     </button>
                                 </subviews>

@@ -33,6 +33,15 @@ class ViewController: UIViewController {
     
   
     @IBAction func onTapImage(_ sender: Any) {
+        //（課題提出後修正）画面遷移する前にタイマーをストップ
+        if self.timer != nil {
+            self.timer.invalidate()   // タイマーを停止する
+            self.timer = nil          // startTimer() の timer == nil-> timer = nil
+            auto1.setTitle("再生", for: UIControl.State.normal) //ボタンを再生に戻す
+            return1.isEnabled = true //戻るボタンを有効に戻す
+            moveon1.isEnabled = true //進むボタンを有効に戻す
+        }
+        
         // セグエを使用して画面を遷移
         performSegue(withIdentifier: "result", sender: nil)
     }
